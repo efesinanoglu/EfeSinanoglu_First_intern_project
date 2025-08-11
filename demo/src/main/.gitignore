@@ -1,0 +1,16 @@
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Build çıktıları
+target/
+build/
+
+# Loglar
+*.log
+
+# Ortam dosyaları / yerel ayarlar
+.env
+application-*.local.properties
+application-*.local.yml
