@@ -1,11 +1,17 @@
 package com.example.demo.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "contents")
+@Schema(description = "Content Entity")
 public class Content {
 
     @Id
@@ -19,4 +25,9 @@ public class Content {
 
     @Column(name = "textblock")
     private String textBlock;
-}
+
+    public Content(String file, String textBlock){
+        this.file = file;
+        this.textBlock = textBlock;
+    }
+    }
